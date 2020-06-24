@@ -6,7 +6,6 @@ package raft
 
 import (
 	"context"
-	"sync"
 	"time"
 
 	"github.com/33cn/chain33/common"
@@ -34,7 +33,6 @@ type Client struct {
 	validatorC  <-chan bool
 	ctx         context.Context
 	cancel      context.CancelFunc
-	mtx         sync.Mutex
 }
 
 // NewBlockstore create Raft Client
